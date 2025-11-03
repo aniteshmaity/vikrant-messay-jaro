@@ -1,0 +1,216 @@
+document.addEventListener("DOMContentLoaded", () => {
+   const clickLayer = document.getElementById("click-layer");
+  const popup = document.getElementById("popup");
+  const close = document.getElementById("close");
+
+  clickLayer.addEventListener("click", () => {
+    console.log("is clicked in video");
+    popup.classList.remove("hidden");
+    popup.classList.add("flex");
+  });
+
+  close.addEventListener("click", () => popup.classList.add("hidden"));
+});
+
+
+//accordian question
+  document.querySelectorAll(".accordion button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector("svg");
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.style.transform = "rotate(0deg)";
+      } else {
+        // Close others
+        document.querySelectorAll(".accordion-content").forEach((el) => {
+          el.style.maxHeight = null;
+          el.previousElementSibling.querySelector("svg").style.transform = "rotate(0deg)";
+        });
+        // Open current
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.style.transform = "rotate(180deg)";
+      }
+    });
+  });
+
+
+  const swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "3",
+        loop: true,
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // },
+        coverflowEffect: {
+          rotate: 10,
+          stretch: 0,
+          depth: 200,
+          modifier: 1.2,
+          // slideShadows: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+    320: { // small mobile
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: { // tablets
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: { // laptops
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+   
+  },
+      });
+
+
+       const quizData = [
+    {
+      question: "How would you describe where you are right now?",
+      answers: ["I’m doing everything right… but nothing’s really changing.","I’m busy every day, yet not really moving forward.", "I’m doing okay — but it doesn’t feel like enough anymore."]
+    },
+    {
+      question: "What do you feel is holding you back?",
+      answers: ["I’ve stopped learning new things.", "I’m not sure what direction to take next.", "I don’t feel confident about my growth."]
+    },
+     {
+      question: "What do you wish you had right now in your career?",
+      answers: ["Clear direction and guidance.", "Confidence to take the next step.", "Skills that actually make a difference."]
+    },
+    {
+       question: "What kind of support would help you move forward?",
+      answers: ["Personal career counselling", "upskilling", "Help finding the right program"]
+    }
+  ];
+
+
+      // quies asswer 
+       const startBtn = document.getElementById("start-btn");
+  const startScreen = document.getElementById("start-screen");
+  const quizStep = document.getElementById("quiz-step");
+  const progressPercent = document.getElementById("progress-percent");
+  const resultScreen = document.getElementById("result-screen");
+  const progressBar = document.getElementById("progress-bar");
+  const questionEl = document.getElementById("question");
+  const answersEl = document.getElementById("answers");
+  const nextBtn = document.getElementById("next-btn");
+
+  let currentStep = 0;
+  let selectedAnswer = null;
+    let userAnswers = []; // Store answers for console
+
+  startBtn.addEventListener("click", () => {
+    startScreen.classList.add("hidden");
+    quizStep.classList.remove("hidden");
+    loadQuestion();
+  });
+
+  function loadQuestion() {
+    const current = quizData[currentStep];
+    questionEl.textContent = current.question;
+    answersEl.innerHTML = "";
+
+    current.answers.forEach((answer, index) => {
+      const label = document.createElement("label");
+      label.className =
+        "answer-block flex items-center gap-3 border-[4px] border-white bg-[#63636333] rounded-full text-[14px] md:text-[18px] font-roboto font-medium px-6 py-4 cursor-pointer hover:bg-gray-100 transition-all duration-300 shadow-[0px_0px_4px_0px_#FFE8E840,_20px_20px_36px_0px_#00000040,_24px_24px_32px_0px_#0000001A]";
+
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = "answer";
+      input.value = answer;
+      input.className = "w-5 h-5 accent-[#304A98]";
+
+      const span = document.createElement("span");
+      span.textContent = answer;
+      span.className = "text-gray-800 text-[14px] md:text-[18px] transition-all duration-300";
+
+      input.addEventListener("change", () => {
+        selectedAnswer = answer;
+        nextBtn.classList.remove("hidden");
+
+        // Reset all labels
+        document.querySelectorAll(".answer-block").forEach((el) => {
+          el.style.borderColor = "white";
+          el.style.boxShadow =
+            "0px 0px 4px 0px #FFE8E840, 20px 20px 36px 0px #00000040, 24px 24px 32px 0px #0000001A";
+          el.style.background = "#63636333";
+          const innerSpan = el.querySelector("span");
+          if (innerSpan) innerSpan.style.color = "#000";
+        });
+
+        // Apply selected style
+        label.style.borderColor = "#304A98";
+        label.style.background = "#000";
+        label.style.boxShadow =
+          "16px 16px 32px 0px #000F3EB2, inset 0px 0px 52px 0px #3262F266";
+        span.style.color = "#ffffff";
+      });
+
+      label.appendChild(input);
+      label.appendChild(span);
+      answersEl.appendChild(label);
+    });
+
+    updateProgress();
+    nextBtn.classList.add("hidden");
+  }
+
+  function updateProgress() {
+    const progress = ((currentStep + 1) / quizData.length) * 100;
+    progressBar.style.width = progress + "%";
+    progressPercent.textContent = Math.round(progress) + "%";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (!selectedAnswer) return;
+
+    // Save answer
+    userAnswers.push({
+      question: quizData[currentStep].question,
+      answer: selectedAnswer,
+    });
+
+    currentStep++;
+    selectedAnswer = null;
+
+    if (currentStep < quizData.length) {
+      loadQuestion();
+    } else {
+      quizStep.classList.add("hidden");
+      resultScreen.classList.remove("hidden");
+
+      // Print results to console
+      console.log("📋 Quiz Answers:");
+      userAnswers.forEach((item, index) => {
+        console.log(`Q${index + 1}: ${item.question}`);
+        console.log(`Answer: ${item.answer}`);
+        console.log("-----------------------------");
+      });
+    }
+  });
+  // nextBtn.addEventListener("click", () => {
+  //   if (!selectedAnswer) return;
+  //   currentStep++;
+  //   selectedAnswer = null;
+
+  //   if (currentStep < quizData.length) {
+  //     loadQuestion();
+  //   } else {
+  //     quizStep.classList.add("hidden");
+  //     resultScreen.classList.remove("hidden");
+  //   }
+  // });
+
+
