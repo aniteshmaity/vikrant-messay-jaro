@@ -132,31 +132,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-   const clickLayer = document.getElementById("click-layer");
+  const clickLayer = document.getElementById("click-layer");
   const popup = document.getElementById("popup");
   const close = document.getElementById("close");
   const video = document.querySelector("#popup video");
+   const backgroundVideo = document.getElementById("video-section");
 
+  // Open popup and play video
   clickLayer.addEventListener("click", () => {
-    console.log("is clicked in video");
     popup.classList.remove("hidden");
     popup.classList.add("flex");
+if (backgroundVideo) backgroundVideo.pause();
+    if (video) {
+      video.currentTime = 0; // optional: restart video
+      video.play(); // play automatically
+    }
   });
 
-  //Close popup (on close button)
+  // Close popup (close button)
   close.addEventListener("click", () => {
     popup.classList.add("hidden");
-    if (video) video.pause(); // Pause video when popup closes
+    if (video) video.pause();
+     if (backgroundVideo) backgroundVideo.play();
   });
 
-  // Close popup when clicking outside the popup content
+  // Close popup when clicking outside the content
   popup.addEventListener("click", (e) => {
-    if (e.target === popup) { // clicked on background, not inner content
+    if (e.target === popup) {
       popup.classList.add("hidden");
       if (video) video.pause();
+      if (backgroundVideo) backgroundVideo.play();
     }
   });
 });
+
 
 
 
