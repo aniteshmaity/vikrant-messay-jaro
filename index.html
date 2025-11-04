@@ -111,7 +111,7 @@
   </header>
 
   <main class="text-center">
-    <section class="relative h-[calc(100vh-55px)] md:h-[calc(100vh-55px)] bg-red">
+    <section class="relative h-[calc(100vh-55px)] md:h-full bg-red">
 
       <!-- Background Video -->
       <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1]"
@@ -120,7 +120,6 @@
           type="video/mp4">
       </video>
       <!-- <div class="absolute inset-0 bg-black/30"></div> -->
-
       <!-- Custom cursor -->
       <!-- <div id="play-cursor" class="hidden fixed w-20 h-20 bg-white/20 backdrop-blur-sm border border-white rounded-full flex items-center justify-center text-white text-sm pointer-events-none transition-transform duration-150 ease-out">
     
@@ -130,7 +129,7 @@
       </div>
 
       <!-- Popup video -->
-      <div id="popup" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
+      <!-- <div id="popup" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
         <div class="relative w-[80%] max-w-4xl">
           <button id="close" class="absolute -top-10 right-0 text-white text-3xl">&times;</button>
           <video controls autoplay class="w-full rounded-lg cursor-pointer">
@@ -139,16 +138,17 @@
               type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
 
       <div class="wrapper">
-        <div class="relative z-20 max-w-[820px] w-[340px] md:w-[70%] lg:w-full m-auto lg:m-0 lg:ml-auto pt-12">
+        <div class="flex  md:max-w-[650px] ml-auto flex-col justify-center gap-8 pb-12">
+          <div class="relative z-20  w-[340px]  md:w-full m-auto lg:m-0 lg:ml-auto pt-12">
           <h2
             class="text-[30px] leading-[36px] md:text-5xl font-bold text-white  font-raleway md:leading-[60px] italic relative cursor-pointer">
-            <span class="absolute lg:left-[20px] -left-[30px]"><img class="w-[30px] md:w-full"
+            <span class="absolute md:left-[-50px] -left-[30px]"><img class="w-[30px] md:w-full"
                 src="./assets/images/left-colon.svg" alt="left-col"></span>
             Asli udaan sirf pankh se nahi taiyaari se bhari jati hai.
-            <span class="absolute lg:right-[70px] right-[80px]"><img class="w-[30px] md:w-full"
+            <span class="absolute md:right-[0px] right-[80px]"><img class="w-[30px] md:w-full"
                 src="./assets/images/right-colon.svg" alt="right-col"></span>
           </h2>
           <p class="font-roboto text-white text-center text-[20px] md:text-[26px] leading-[50px] tracking-[-2.8px]">
@@ -157,9 +157,8 @@
         </div>
 
         <!-- //---------------------------- from -->
-        <div
-        id="formSection"
-          class="max-w-full relative z-20 md:max-w-[528px] mt-[10%] lg:mt-0 m-auto lg:ml-auto lg:mr-[40px] bg-[#0000005C] border-2 border-white rounded-[21px] p-6">
+        <div id="formSection"
+          class="max-w-full w-full  relative z-20 md:max-w-[528px] mt-[5%] lg:mt-0 m-auto lg:ml-auto  bg-[#0000005C] border-2 border-white rounded-[21px] p-6">
 
           <!-- Heading (inside form box) -->
           <div class="text-center mb-4">
@@ -174,12 +173,12 @@
 
             <!-- First & Last Name -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
+              <div class="text-left">
                 <label for="firstName" class="label-common font-raleway">First Name</label>
                 <input id="firstName" name="firstName" type="text" placeholder="Enter your first name"
                   class="input-common">
               </div>
-              <div>
+              <div class="text-left">
                 <label for="lastName" class="label-common font-raleway">Last Name</label>
                 <input id="lastName" name="lastName" type="text" placeholder="Enter your last name"
                   class="input-common">
@@ -187,13 +186,13 @@
             </div>
 
             <!-- Email -->
-            <div class="mt-4">
+            <div class="mt-4 text-left">
               <label for="email" class="label-common font-raleway">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="example@email.com" class="input-common">
+              <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="example@email.com" class="input-common">
             </div>
 
             <!-- Phone -->
-            <div class="mt-4">
+            <div class="mt-4 text-left">
               <label for="phone" class="label-common font-raleway">Phone Number</label>
               <input id="phone" name="phone" type="tel" placeholder="Enter phone number" class="input-common">
             </div>
@@ -233,6 +232,7 @@
             </button>
           </form>
 
+        </div>
         </div>
       </div>
     </section>
@@ -471,11 +471,11 @@
       </div>
       <a href="#formSection">
         <button
-        class="w-[70%] md:w-auto bg-[#D58A00] font-roboto md:text-[25px] text-[16px] leading-[27px] font-semibold px-5 py-4 lg:py-2 rounded-[33px] mt-6">
-        Free 1:1 Career Counselling
-      </button>
+          class="w-[70%] md:w-auto bg-[#D58A00] font-roboto md:text-[25px] text-[16px] leading-[27px] font-semibold px-5 py-4 lg:py-2 rounded-[33px] mt-6">
+          Free 1:1 Career Counselling
+        </button>
       </a>
-      
+
 
 
       <div class="wrapper mt-8">
@@ -517,42 +517,42 @@
         <div class="program-marquee--marquee">
           <div class="program-marquee--marquee-group">
             <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-world.png" alt="">
+              <img src="./assets/images/Image-world.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-(IIM Ahmedabad).png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-(IIM Ahmedabad).png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-xled.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-xled.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-we-school.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-we-school.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/liba.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/liba.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/paruel.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/paruel.png" alt="">
             </div>
           </div>
           <div aria-hidden="true" class="program-marquee--marquee-group">
-           <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-world.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-world.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-(IIM Ahmedabad).png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-(IIM Ahmedabad).png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-xled.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-xled.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/Image-we-school.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/Image-we-school.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/liba.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/liba.png" alt="">
             </div>
-              <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
-              <img  src="./assets/images/paruel.png" alt="">
+            <div class="flex justify-center items-center h-[60px] md:h-[100px] bg-white rounded-[20px]">
+              <img src="./assets/images/paruel.png" alt="">
             </div>
           </div>
         </div>
@@ -732,12 +732,12 @@
           next milestone.
         </p>
         <a href="#formSection">
-           <button
-          class="rounded-[14px] mt-[60px] font-roboto tracking-[0.5px] font-bold text-[16px] md:text-[20px] leading-[16px] md:leading-[21px] rounded-[33px] px-6 py-4 text-white bg-[#f25657] border border-[#FFFFFF1A] hover:bg-white hover:text-black transition duration-300">
-          Start My Counselling Journey
-        </button>
+          <button
+            class="rounded-[14px] mt-[60px] font-roboto tracking-[0.5px] font-bold text-[16px] md:text-[20px] leading-[16px] md:leading-[21px] rounded-[33px] px-6 py-4 text-white bg-[#f25657] border border-[#FFFFFF1A] hover:bg-white hover:text-black transition duration-300">
+            Start My Counselling Journey
+          </button>
         </a>
-       
+
       </div>
     </section>
 
@@ -975,7 +975,7 @@
         <div class="text-white  max-w-[920px] right-[330px] text-left ml-auto">
           <h3 class="italic text-[15px] md:text-[38px] leading-[25px] md:leading-[45px] ">Kuch log sirf chahte hai ki
             duniya unhe dekhein.</h3>
-          <h2 class="italic text-[15px] md:text-[65px] leading-[20px] md:leading-[81px] mt-1 md:mt-2 font-[700]">Lekin
+          <h2 class="italic text-[15px] text-[#FDC700] md:text-[65px] leading-[20px] md:leading-[81px] mt-1 md:mt-2 font-[700]">Lekin
             kuch log aisa kaam karte hai ki duniya
             unhe
             dekhne par majboor ho jati hai.</h2>
@@ -1049,7 +1049,8 @@
             class="accordion border-t-2 border-x-2 border-b-0 border-[#F3F4F6] shadow-[0_1px_3px_0_#0000001A,0_1px_2px_-1px_#0000001A] rounded-[14px]">
             <button
               class="w-full flex justify-between items-center p-4 text-left text-white font-medium focus:outline-none">
-              <span class="text-[#0029A4] font-roboto text-[16px] font-medium leading-[24px]">What programs does Jaro Education offer?</span>
+              <span class="text-[#0029A4] font-roboto text-[16px] font-medium leading-[24px]">What programs does Jaro
+                Education offer?</span>
               <svg class="w-5 h-5 transition-transform duration-300 text-black" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24">
                 <path d="M19 9l-7 7-7-7" />
@@ -1057,12 +1058,15 @@
             </button>
             <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
               <p class="p-4 text-gray-600 ">
-                Jaro Education offers a diverse range of online and executive programs in collaboration with India’s top-ranked institutions such as IIMs, IITs, and leading global universities.
+                Jaro Education offers a diverse range of online and executive programs in collaboration with India’s
+                top-ranked institutions such as IIMs, IITs, and leading global universities.
 
               </p>
               <p class="p-4 text-gray-600">
-                Jaro Education offers a diverse range of online and executive programs in collaboration with India’s top-ranked institutions such as IIMs, IITs, and leading global universities.
- Our portfolio includes programs in Management, Technology, Finance, Leadership, Data Science, AI, and more, designed for working professionals and aspiring leaders.
+                Jaro Education offers a diverse range of online and executive programs in collaboration with India’s
+                top-ranked institutions such as IIMs, IITs, and leading global universities.
+                Our portfolio includes programs in Management, Technology, Finance, Leadership, Data Science, AI, and
+                more, designed for working professionals and aspiring leaders.
               </p>
             </div>
           </div>
@@ -1070,7 +1074,8 @@
             class="accordion border-t-2 border-x-2 border-b-0 border-[#F3F4F6] shadow-[0_1px_3px_0_#0000001A,0_1px_2px_-1px_#0000001A] rounded-[14px]">
             <button
               class="w-full flex justify-between items-center p-4 text-left text-white font-medium focus:outline-none">
-              <span class="text-[#0029A4] font-roboto text-[16px] font-medium leading-[24px]">Are the programs accredited and recognized?</span>
+              <span class="text-[#0029A4] font-roboto text-[16px] font-medium leading-[24px]">Are the programs
+                accredited and recognized?</span>
               <svg class="w-5 h-5 transition-transform duration-300 text-black" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24">
                 <path d="M19 9l-7 7-7-7" />
@@ -1078,7 +1083,9 @@
             </button>
             <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
               <p class="p-4 text-gray-600">
-             Absolutely. All our partner institutions are AICTE-approved, UGC-recognized, and nationally or globally accredited (including NAAC and NIRF rankings). The certifications and degrees are issued directly by the respective institutes, ensuring authenticity and credibility.
+                Absolutely. All our partner institutions are AICTE-approved, UGC-recognized, and nationally or globally
+                accredited (including NAAC and NIRF rankings). The certifications and degrees are issued directly by the
+                respective institutes, ensuring authenticity and credibility.
 
               </p>
             </div>
@@ -1091,12 +1098,12 @@
 
 
 
-  <footer class="bg-center bg-cover relative overflow-hidden flex gap-4"
+  <footer class="bg-center bg-cover relative overflow-hidden flex items-end gap-4"
     style="background-image: url('./assets/images/footer-banner.webp');">
 
     <div class="relative hidden xl:block">
-      <img src="./assets/images/profile-footer.webp" alt="vikrant-profile"
-        class="absolute left-0 bottom-0 z-10 h-full" />
+      <img src="./assets/images/profile-footer-new.png" alt="vikrant-profile"
+        class="absolute left-0 bottom-0 z-10" />
       <img src="./assets/images/yellow-strap-new.png" alt="yellow-strap" class="w-full h-full" />
     </div>
     <div class=" pt-14 pb-8 2xl:max-w-[1050px] xl:max-w-[950px] m-auto">
@@ -1104,24 +1111,23 @@
       <div
         class="grid grid-cols-1 xl:grid-cols-[auto_auto] justify-items-center xl:justify-items-stretch gap-y-14  2xl:gap-x-[150px] xl:gap-x-[90px] xl:px-8">
 
-        <div class="grid grid-cols-[auto_auto]  gap-4 pr-4 xl:block border-b border-white lg:border-0">
+        <div class="grid grid-cols-[auto_auto] items-end  gap-4 pr-4 xl:block border-b border-white lg:border-0">
           <div class="relative xl:hidden">
-            <img src="./assets/images/profile-footer.webp" alt="vikrant-profile"
-              class="absolute left-0 bottom-0 z-10 h-full" />
+            <img src="./assets/images/profile-footer-new.png" alt="vikrant-profile"
+              class="absolute left-0 bottom-0 z-10 " />
             <img src="./assets/images/yellow-strap-new.png" alt="yellow-strap" class="w-full h-full" />
           </div>
           <div>
             <h2
               class="font-raleway heading-primary fon md:text-[36.7px] 2xl:text-[38.7px] md:leading-[50px] 2xl:leading-[52px] font-bold text-white">
-            Can working professionals enrol while continuing their jobs? </h2>
+              Professional Career Counselling You Can Trust  </h2>
             <p
               class="font-roboto text-[#FFFFFFCC] leading-[22.25px] md:leading-[29.25px] text-[14px] md:text-[18px] mt-6">
-             Yes. The listed programs are structured with flexible online learning modes, including live interactive sessions, weekend classes, and recorded lectures, allowing professionals to balance learning with their work commitments seamlessly. </p>
+              Jaro Education is a publicly listed organization with 16+ years of experience in career counselling. Over 3,50,000 professionals have found their career direction with us. Book your free session today.  </p>
             <a href="#formSection">
               <button
-            
-              class="text-[#0029A4] 2xl:text-[18px] md:text-[16px] text-[14px] 2xl:leading-[11.71px]  md:leading-[13.71px] font-roboto font-semibold bg-white rounded-[14px] mt-14 py-2 md:py-4 px-6 shadow-[0_10px_15px_-3px_#0000001A,0_4px_6px_-4px_#0000001A] hover:bg-[#e85f00] transition">Book
-              Free Career Counselling</button>
+                class="text-[#0029A4] 2xl:text-[18px] md:text-[16px] text-[14px] 2xl:leading-[11.71px]  md:leading-[13.71px] font-roboto font-semibold bg-white rounded-[14px] mt-6 xl:mt-14 mb-4 xl:mb-0 py-2 md:py-4 px-6 shadow-[0_10px_15px_-3px_#0000001A,0_4px_6px_-4px_#0000001A] hover:bg-[#e85f00] transition">Book
+                Free Career Counselling</button>
             </a>
           </div>
         </div>

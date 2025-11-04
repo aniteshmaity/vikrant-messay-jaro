@@ -1,7 +1,141 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("applyForm");
+
+  // Helper function to sanitize input
+  const sanitize = (value) => {
+    return value
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  };
+
+  // Validation patterns
+  const patterns = {
+    name: /^[a-zA-Z\s'-]{2,40}$/,
+    email: /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/,
+    phone: /^[6-9]\d{9}$/, // Indian 10-digit mobile numbers
+    work: /^[a-zA-Z0-9\s.,-]{1,50}$/,
+    city: /^[a-zA-Z\s'-]{2,40}$/
+  };
+
+  const showError = (input, message) => {
+    removeError(input);
+    const error = document.createElement("p");
+    error.textContent = message;
+    error.className = "error-message text-red-500 text-xs mt-1";
+    input.insertAdjacentElement("afterend", error);
+    input.classList.add("border-red-500");
+  };
+
+  const removeError = (input) => {
+    const next = input.nextElementSibling;
+    if (next && next.classList.contains("error-message")) {
+      next.remove();
+    }
+    input.classList.remove("border-red-500");
+  };
+
+   const phoneInput = document.getElementById("phone");
+  phoneInput.addEventListener("input", (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, ""); // restrict non-numeric
+  });
+
+  // Allow only letters for name & city fields
+  ["firstName", "lastName", "city"].forEach((id) => {
+    const input = document.getElementById(id);
+    input.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, ""); // restrict non-letter
+      removeError(input);
+    });
+  });
+
+   // Live error removal + live email validation
+  form.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("input", () => {
+      removeError(input);
+
+      // Live email validation
+      if (input.type === "email") {
+        const email = input.value.trim();
+        if (email && !patterns.email.test(email)) {
+          showError(input, "Please enter a valid email address");
+        } else {
+          removeError(input);
+        }
+      }
+    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let isValid = true;
+    form.querySelectorAll(".error-message").forEach(el => el.remove());
+
+    // Get and sanitize input values
+    const firstName = sanitize(form.firstName.value.trim());
+    const lastName = sanitize(form.lastName.value.trim());
+    const email = sanitize(form.email.value.trim());
+    const phone = sanitize(form.phone.value.trim());
+    const work = sanitize(form.work.value.trim());
+    const city = sanitize(form.city.value.trim());
+
+   
+
+    // Validate each field
+    if (!firstName) { showError(form.firstName, "First name is required."); isValid = false; }
+    else if (!patterns.name.test(firstName)) { showError(form.firstName, "Enter a valid name."); isValid = false; }
+
+    if (!lastName) { showError(form.lastName, "Last name is required."); isValid = false; }
+    else if (!patterns.name.test(lastName)) { showError(form.lastName, "Enter a valid name."); isValid = false; }
+
+    if (!email) { showError(form.email, "Email is required."); isValid = false; }
+    else if (!patterns.email.test(email)) { showError(form.email, "Enter a valid email address."); isValid = false; }
+
+    if (!phone) { showError(form.phone, "Phone number is required."); isValid = false; }
+    else if (!patterns.phone.test(phone)) { showError(form.phone, "Enter a valid 10-digit phone number."); isValid = false; }
+
+    if (!work) { showError(form.work, "Work experience is required."); isValid = false; }
+    else if (!patterns.work.test(work)) { showError(form.work, "Enter a valid experience (no symbols)."); isValid = false; }
+
+    if (!city) { showError(form.city, "City is required."); isValid = false; }
+    else if (!patterns.city.test(city)) { showError(form.city, "Enter a valid city name."); isValid = false; }
+
+   
+
+    // If valid → handle success
+    if (isValid) {
+      const formData = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        work,
+        city,
+        
+      };
+
+      console.log("Sanitized Data:", formData);
+      alert("Form validated successfully!");
+      form.reset();
+    } else {
+      const firstError = form.querySelector(".error-message");
+      if (firstError) firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+});
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
    const clickLayer = document.getElementById("click-layer");
   const popup = document.getElementById("popup");
   const close = document.getElementById("close");
+  const video = document.querySelector("#popup video");
 
   clickLayer.addEventListener("click", () => {
     console.log("is clicked in video");
@@ -9,8 +143,23 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.add("flex");
   });
 
-  close.addEventListener("click", () => popup.classList.add("hidden"));
+  //Close popup (on close button)
+  close.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    if (video) video.pause(); // Pause video when popup closes
+  });
+
+  // Close popup when clicking outside the popup content
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) { // clicked on background, not inner content
+      popup.classList.add("hidden");
+      if (video) video.pause();
+    }
+  });
 });
+
+
+
 
 
 //accordian question
