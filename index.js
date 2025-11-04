@@ -217,8 +217,12 @@ if (backgroundVideo) backgroundVideo.pause();
         },
         breakpoints: {
     320: { // small mobile
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 1.1,
+      spaceBetween: 5,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
     },
     640: { // tablets
       slidesPerView: 2,
@@ -282,7 +286,7 @@ if (backgroundVideo) backgroundVideo.pause();
     current.answers.forEach((answer, index) => {
       const label = document.createElement("label");
       label.className =
-        "answer-block flex items-center gap-3 border-[4px] border-white bg-[#63636333] rounded-full text-[14px] md:text-[18px] font-roboto font-medium px-6 py-4 cursor-pointer hover:bg-gray-100 transition-all duration-300 shadow-[0px_0px_4px_0px_#FFE8E840,_20px_20px_36px_0px_#00000040,_24px_24px_32px_0px_#0000001A]";
+        "answer-block flex items-center gap-3 border-[4px] text-left border-white bg-[#63636333] rounded-full text-[14px] md:text-[18px] font-roboto font-medium px-6 py-4 cursor-pointer hover:bg-gray-100 transition-all duration-300 shadow-[0px_0px_4px_0px_#FFE8E840,_20px_20px_36px_0px_#00000040,_24px_24px_32px_0px_#0000001A]";
 
       const input = document.createElement("input");
       input.type = "radio";

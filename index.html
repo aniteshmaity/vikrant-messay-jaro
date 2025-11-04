@@ -111,11 +111,10 @@
   </header>
 
   <main class="text-center">
-    <section class="relative h-[calc(100vh-55px)] md:h-full bg-red">
+    <section class="relative  h-full bg-red">
 
       <!-- Background Video -->
-      <video autoplay loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1]"
-        id="video-section">
+      <video autoplay loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-1]" id="video-section">
         <source src="https://jaro-website.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/10/29115704/vIKRANT.mp4"
           type="video/mp4">
       </video>
@@ -132,7 +131,7 @@
       <div id="popup" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
         <div class="relative w-[80%] max-w-4xl">
           <button id="close" class="absolute -top-10 right-0 text-white text-3xl">&times;</button>
-          <video controls  class="w-full rounded-lg cursor-pointer">
+          <video controls class="w-full rounded-lg cursor-pointer">
             <source
               src="https://jaro-website.s3.ap-south-1.amazonaws.com/wp-content/uploads/2025/10/29115704/vIKRANT.mp4"
               type="video/mp4">
@@ -142,97 +141,98 @@
 
       <div class="wrapper">
         <div class="flex  md:max-w-[650px] ml-auto flex-col justify-center gap-8 pb-12">
-          <div class="relative z-20  w-[340px]  md:w-full m-auto lg:m-0 lg:ml-auto pt-12">
-          <h2
-            class="text-[30px] leading-[36px] md:text-5xl font-bold text-white  font-raleway md:leading-[60px] italic relative cursor-pointer">
-            <span class="absolute md:left-[-50px] -left-[30px]"><img class="w-[30px] md:w-full"
-                src="./assets/images/left-colon.svg" alt="left-col"></span>
-            Asli udaan sirf pankh se nahi taiyaari se bhari jati hai.
-            <span class="absolute md:right-[0px] right-[80px]"><img class="w-[30px] md:w-full"
-                src="./assets/images/right-colon.svg" alt="right-col"></span>
-          </h2>
-          <p class="font-roboto text-white text-center text-[20px] md:text-[26px] leading-[50px] tracking-[-2.8px]">
-            - Vikrant Massey
-          </p>
-        </div>
-
-        <!-- //---------------------------- from -->
-        <div id="formSection"
-          class="max-w-full w-full  relative z-20 md:max-w-[528px] mt-[5%] lg:mt-0 m-auto lg:ml-auto  bg-[#0000005C] border-2 border-white rounded-[21px] p-6">
-
-          <!-- Heading (inside form box) -->
-          <div class="text-center mb-4">
-            <h2 class="text-2xl font-roboto font-bold  text-white">APPLY NOW</h2>
-            <p class="text-gray-300 text-[10px]  font-roboto">
-              Get information about programs and admissions
+          <div class="relative z-20 w-[300px] md:w-[340px]  md:w-full m-auto lg:m-0 lg:ml-auto pt-12">
+            <h2
+              class="text-[30px] leading-[36px] md:text-5xl font-bold text-white  font-raleway md:leading-[60px] italic relative cursor-pointer">
+              <span class="absolute md:left-[-50px] -left-[30px]"><img class="w-[25px] md:w-full"
+                  src="./assets/images/left-colon.svg" alt="left-col"></span>
+              Asli udaan sirf pankh se nahi taiyaari se bhari jati hai.
+              <span class="absolute md:right-[0px] right-[20px]"><img class="w-[25px] md:w-full"
+                  src="./assets/images/right-colon.svg" alt="right-col"></span>
+            </h2>
+            <p class="font-roboto text-white text-center text-[20px] md:text-[26px] leading-[50px] tracking-[-2.8px]">
+              - Vikrant Massey
             </p>
           </div>
 
-          <!-- Form -->
-          <form class="space-y-3" id="applyForm">
+          <!-- //---------------------------- from -->
+          <div id="formSection"
+            class="max-w-full w-full  relative z-20 md:max-w-[528px] mt-[5%] lg:mt-0 m-auto lg:ml-auto  bg-[#0000005C] border-2 border-white rounded-[21px] p-6">
 
-            <!-- First & Last Name -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="text-left">
-                <label for="firstName" class="label-common font-raleway">First Name</label>
-                <input id="firstName" name="firstName" type="text" placeholder="Enter your first name"
-                  class="input-common">
+            <!-- Heading (inside form box) -->
+            <div class="text-center mb-4">
+              <h2 class="text-2xl font-roboto font-bold  text-white">APPLY NOW</h2>
+              <p class="text-gray-300 text-[10px]  font-roboto">
+                Get information about programs and admissions
+              </p>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-3" id="applyForm">
+
+              <!-- First & Last Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="text-left">
+                  <label for="firstName" class="label-common font-raleway">First Name</label>
+                  <input id="firstName" name="firstName" type="text" placeholder="Enter your first name"
+                    class="input-common">
+                </div>
+                <div class="text-left">
+                  <label for="lastName" class="label-common font-raleway">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" placeholder="Enter your last name"
+                    class="input-common">
+                </div>
               </div>
-              <div class="text-left">
-                <label for="lastName" class="label-common font-raleway">Last Name</label>
-                <input id="lastName" name="lastName" type="text" placeholder="Enter your last name"
-                  class="input-common">
+
+              <!-- Email -->
+              <div class="mt-4 text-left">
+                <label for="email" class="label-common font-raleway">Email Address</label>
+                <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  placeholder="example@email.com" class="input-common">
               </div>
-            </div>
 
-            <!-- Email -->
-            <div class="mt-4 text-left">
-              <label for="email" class="label-common font-raleway">Email Address</label>
-              <input id="email" name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="example@email.com" class="input-common">
-            </div>
-
-            <!-- Phone -->
-            <div class="mt-4 text-left">
-              <label for="phone" class="label-common font-raleway">Phone Number</label>
-              <input id="phone" name="phone" type="tel" placeholder="Enter phone number" class="input-common">
-            </div>
-
-            <!-- Work & City -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div>
-                <label for="work" class="label-common font-raleway">Work experience</label>
-                <input id="work" name="work" type="text" placeholder="e.g. 2 years" class="input-common">
+              <!-- Phone -->
+              <div class="mt-4 text-left">
+                <label for="phone" class="label-common font-raleway">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="Enter phone number" class="input-common">
               </div>
-              <div>
-                <label for="city" class="label-common font-raleway">City</label>
-                <input id="city" name="city" type="text" placeholder="Enter your city" class="input-common">
+
+              <!-- Work & City -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div>
+                  <label for="work" class="label-common font-raleway">Work experience</label>
+                  <input id="work" name="work" type="text" placeholder="e.g. 2 years" class="input-common">
+                </div>
+                <div>
+                  <label for="city" class="label-common font-raleway">City</label>
+                  <input id="city" name="city" type="text" placeholder="Enter your city" class="input-common">
+                </div>
               </div>
-            </div>
 
 
 
-            <!-- Checkboxes -->
-            <div class="space-y-1 text-sm font-poppins">
-              <label class="flex items-start gap-2 text-[#C4C4C4]">
-                <input type="checkbox" class="mt-1 accent-white" />
-                <span class="text-[10px]">I am a graduate with min. 50% marks*</span>
-              </label>
-              <label class="flex items-start gap-2 text-[#C4C4C4]">
-                <input type="checkbox" class="mt-1 accent-white" />
-                <span class="text-[10px]">I agree to the <a href="#" class="underline hover:text-gray-300 ">Terms and
-                    Conditions</a> of this
-                  website.</span>
-              </label>
-            </div>
+              <!-- Checkboxes -->
+              <div class="space-y-1 text-sm font-poppins">
+                <label class="flex items-start gap-2 text-[#C4C4C4] text-left">
+                  <input type="checkbox" class="mt-1 accent-white" />
+                  <span class="text-[10px]">I am a graduate with min. 50% marks*</span>
+                </label>
+                <label class="flex items-start gap-2 text-[#C4C4C4] text-left">
+                  <input type="checkbox" class="mt-1 accent-white" />
+                  <span class="text-[10px]">I agree to the <a href="#" class="underline hover:text-gray-300 ">Terms and
+                      Conditions</a> of this
+                    website.</span>
+                </label>
+              </div>
 
-            <!-- Button -->
-            <button type="submit"
-              class="w-[75%] bg-[#ce952e] text-white font-semibold text-[14px] py-2 rounded-[25px] hover:bg-yellow-800 transition">
-              Bharo Apne Sapno Ki Udhaan
-            </button>
-          </form>
+              <!-- Button -->
+              <button type="submit"
+                class="w-full md:w-[75%] bg-[#ce952e] text-white font-semibold text-[14px] py-2 rounded-[25px] hover:bg-yellow-800 transition">
+                Bharo Apne Sapno Ki Udhaan
+              </button>
+            </form>
 
-        </div>
+          </div>
         </div>
       </div>
     </section>
@@ -285,7 +285,7 @@
               height="128" alt="Pollinate"> -->
           </div>
           <div aria-hidden="true" class="logo-marquee--marquee-group">
-             <p>JARO EDUCATION IS NOW PUBLICLY LISTED</p>
+            <p>JARO EDUCATION IS NOW PUBLICLY LISTED</p>
             <p>GET 1:1 FREE COUNSELING</p>
             <p>JARO EDUCATION IS NOW PUBLICLY LISTED</p>
             <p>GET 1:1 FREE COUNSELING</p>
@@ -327,52 +327,62 @@
         <!-- slider -->
 
 
-        <div class="wrapper relative">
-          <div class="swiper w-[90%] lg:w-full relative">
+        <div class="wrapper relative" id="slideListId">
+          <div class="swiper w-full md:w-[90%] lg:w-full relative">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div
                 class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
-                <img src="./assets/images/impact-1-webp.webp" alt="card1" class="h-48 w-full object-cover" />
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+                <img src="./assets/images/kozikode.jpg" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Learn at Your Own Pace</h3>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-3">
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Professional Certificate Programme in
+                      Strategic Management
+                      IIM Kozhikode</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
                       <img src="./assets/images/clock.svg" alt="clock">
-                      <p class="text-[14px]">Duration : 2 Years</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 1 Year</p>
                     </div>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D]">
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
                       <img src="./assets/images/calender.svg" alt="clock">
-                      <p class="text-[14px]">Application Closure Date : Closed</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : Closing Soon</p>
                     </div>
                   </div>
-                  <button
-                    class="mt-auto font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                 <a href="https://www.jaroeducation.com/professional-certificate-programme-in-strategic-management-iim-kozhikode/" target="_blank" rel="noopener noreferrer">
+                   <button
+                    class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
                     Enquire Now
                   </button>
+                 </a>
                 </div>
               </div>
 
               <!-- Slide 2 -->
               <div
                 class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
-                <img src="./assets/images/impact-1-webp.webp" alt="card1" class="h-48 w-full object-cover" />
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+                <img src="./assets/images/Swiss-School-of-Management-new.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Learn at Your Own Pace</h3>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-3">
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">
+                      Doctor of Business Administration (DBA)
+                      Swiss School of Management</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
                       <img src="./assets/images/clock.svg" alt="clock">
-                      <p>Duration : 2 Years</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 2 Years</p>
                     </div>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D]">
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
                       <img src="./assets/images/calender.svg" alt="clock">
-                      <p>Application Closure Date : Closed</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : Closing Soon
+                      </p>
                     </div>
                   </div>
-                  <button
-                    class="mt-auto font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
-                    Enquire Now
-                  </button>
+                  <a href="https://www.jaroeducation.com/ssm-dba/" target="_blank" rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button>
+                  </a>
+
                 </div>
               </div>
 
@@ -380,68 +390,142 @@
 
               <div
                 class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
-                <img src="./assets/images/impact-1-webp.webp" alt="card1" class="h-48 w-full object-cover" />
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+                <img src="./assets/images/IIT-Delhi-Campus-Main-new.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Learn at Your Own Pace</h3>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-3">
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Executive Programme in Brand
+                      Management
+                      Programme offered by Continuing Education Programme (CEP), IIT Delhi</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
                       <img src="./assets/images/clock.svg" alt="clock">
-                      <p>Duration : 2 Years</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 6 months</p>
                     </div>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D]">
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
                       <img src="./assets/images/calender.svg" alt="clock">
-                      <p>Application Closure Date : Closed</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : 18th January 2026</p>
                     </div>
                   </div>
-                  <button
-                    class="mt-auto font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
-                    Enquire Now
-                  </button>
+
+                  <a href="https://www.jaroeducation.com/executive-programme-in-brand-management/" target="_blank"
+                    rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button>
+                  </a>
+
                 </div>
               </div>
 
               <!-- Slide 4 -->
               <div
                 class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
-                <img src="./assets/images/impact-1-webp.webp" alt="card1" class="h-48 w-full object-cover" />
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+                <img src="./assets/images/IIM-Mumbai-new.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Learn at Your Own Pace</h3>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-3">
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Blended Post Graduate Program in
+                      Management
+                      MBA (MBA - BPGP)
+                      – IIM Mumbai</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
                       <img src="./assets/images/clock.svg" alt="clock">
-                      <p>Duration : 2 Years</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 2 Years</p>
                     </div>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D]">
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
                       <img src="./assets/images/calender.svg" alt="clock">
-                      <p>Application Closure Date : Closed</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : 23rd November 2025
+                      </p>
                     </div>
                   </div>
-                  <button
-                    class="mt-auto font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
-                    Enquire Now
-                  </button>
+                  <a href="https://www.jaroeducation.com/executive-mba-iim-mumbai/" target="_blank"
+                    rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button>
+                  </a>
                 </div>
               </div>
 
               <div
                 class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
-                <img src="./assets/images/impact-1-webp.webp" alt="card1" class="h-48 w-full object-cover" />
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+                <img src="./assets/images/Web-banner-iim-nagpur-new.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Learn at Your Own Pace</h3>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-3">
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">Post Graduate Certificate Programme
+                      in
+                      Digital Strategy and Marketing Analytics
+                      - IIM Nagpur</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
                       <img src="./assets/images/clock.svg" alt="clock">
-                      <p>Duration : 2 Years</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 9 Months</p>
                     </div>
-                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D]">
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
                       <img src="./assets/images/calender.svg" alt="clock">
-                      <p>Application Closure Date : Closed</p>
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : Closing Soon</p>
                     </div>
                   </div>
-                  <button
-                    class="mt-auto font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
-                    Enquire Now
-                  </button>
+                  <a href="https://www.jaroeducation.com/post-graduate-certificate-programme-in-digital-strategy-and-marketing-analytics-iim-nagpur/"
+                    target="_blank" rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button></a>
+
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
+                <img src="./assets/images//ssodl-new.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
+                  <div>
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">
+                      Online MBA Degree Programme
+                      Symbiosis School for Online and Digital Learning (SSODL)</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
+                      <img src="./assets/images/clock.svg" alt="clock">
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 2 Years</p>
+                    </div>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
+                      <img src="./assets/images/calender.svg" alt="clock">
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : Closing Soon</p>
+                    </div>
+                  </div>
+                  <a href="https://www.jaroeducation.com/online-mba-degree-programme-symbiosis-school-for-online-and-digital-learning-ssodl/"
+                    target="_blank" rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button></a>
+
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide w-[500px]  bg-white rounded-[32px] overflow-hidden card-shadow border border-gray-100 flex flex-col">
+                <img src="./assets/images/Web-banner-CU.webp" alt="card1" class="h-48 w-full object-cover" />
+                <div class="p-3 md:p-6 flex flex-col flex-grow justify-between gap-4">
+                  <div>
+                    <h3 class="text-xl text-left font-semibold mb-6 text-gray-900">
+                      Online Master of Business Administration
+                      Chandigarh University</h3>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] mb-0 md:mb-3">
+                      <img src="./assets/images/clock.svg" alt="clock">
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Duration : 24 Months</p>
+                    </div>
+                    <div class="flex gap-3 font-noto text-[17.1px] leading-[24px] text-[#6D6D6D] text-left">
+                      <img src="./assets/images/calender.svg" alt="clock">
+                      <p class="text-[11px] leading-[18px] md:text-[13px]">Application Closure Date : Closing Soon</p>
+                    </div>
+                  </div>
+                  <a href="https://www.jaroeducation.com/online-master-of-business-administration-chandigarh-university/"
+                    target="_blank" rel="noopener noreferrer">
+                    <button
+                      class="mt-auto w-full font-roboto bg-[#0029A6] rounded-[30px] text-white px-4 py-2  font-normal hover:bg-[#e55d00] transition-all shadow-md">
+                      Enquire Now
+                    </button></a>
+
                 </div>
               </div>
             </div>
@@ -550,7 +634,7 @@
         </div>
       </div>
 
-      <div class="wrapper italic font-roboto text-primary text-white  mt-20">
+      <div class="wrapper italic font-roboto text-primary text-white  mt-12 md:mt-20">
         Growth today requires learning, adaptability, and the right counselling to stay ahead.
       </div>
 
@@ -614,46 +698,44 @@
         </div>
         <!-- Result Screen -->
         <div id="result-screen" class="hidden text-center">
-          <h2 class="text-primary text-[#010206] mb-6 font-roboto">
+          <h2 class="text-[16px] px-2 md:px-0 text-[#010206] mb-2 md:mb-6 font-roboto font-[600]">
             You’re ready for your next step. Let’s make it count — together.
           </h2>
           <form class="space-y-3 w-[80%] m-auto" id="applyQuizForm">
 
             <!-- First & Last Name -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2">
               <div>
-                <label for="firstName" class="label-common font-raleway">First Name</label>
-                <input id="firstName" name="firstName" type="text" placeholder="Enter your first name"
+                
+                <input id="firstName" name="firstName" type="text" placeholder="First Name"
                   class="input-common">
               </div>
               <div>
-                <label for="lastName" class="label-common font-raleway">Last Name</label>
-                <input id="lastName" name="lastName" type="text" placeholder="Enter your last name"
+                <input id="lastName" name="lastName" type="text" placeholder="Last Name"
                   class="input-common">
               </div>
             </div>
 
             <!-- Email -->
             <div class="mt-4">
-              <label for="email" class="label-common font-raleway">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="example@email.com" class="input-common">
+              <input id="email" name="email" type="email" placeholder="Email Address" class="input-common">
             </div>
 
             <!-- Phone -->
             <div class="mt-4">
-              <label for="phone" class="label-common font-raleway">Phone Number</label>
-              <input id="phone" name="phone" type="tel" placeholder="Enter phone number" class="input-common">
+          
+              <input id="phone" name="phone" type="tel" placeholder="Phone Number" class="input-common">
             </div>
 
             <!-- Work & City -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div>
-                <label for="work" class="label-common font-raleway">Work experience</label>
-                <input id="work" name="work" type="text" placeholder="e.g. 2 years" class="input-common">
+                
+                <input id="work" name="work" type="text" placeholder="Work experience" class="input-common">
               </div>
               <div>
-                <label for="city" class="label-common font-raleway">City</label>
-                <input id="city" name="city" type="text" placeholder="Enter your city" class="input-common">
+               
+                <input id="city" name="city" type="text" placeholder="City" class="input-common">
               </div>
             </div>
 
@@ -755,7 +837,7 @@
               class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               Diverse Programme Portfolio</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               From online degrees to executive certifications and corporate training, our portfolio spans disciplines,
               industries, and professional levels, ensuring there’s a learning path for every goal.</p>
           </div>
@@ -967,7 +1049,9 @@
         <div class="text-white  max-w-[920px] right-[330px] text-left ml-auto">
           <h3 class="italic text-[15px] md:text-[38px] leading-[25px] md:leading-[45px] ">Kuch log sirf chahte hai ki
             duniya unhe dekhein.</h3>
-          <h2 class="italic text-[15px] text-[#FDC700] md:text-[65px] leading-[20px] md:leading-[81px] mt-1 md:mt-2 font-[700]">Lekin
+          <h2
+            class="italic text-[15px] text-[#FDC700] md:text-[65px] leading-[20px] md:leading-[81px] mt-1 md:mt-2 font-[700]">
+            Lekin
             kuch log aisa kaam karte hai ki duniya
             unhe
             dekhne par majboor ho jati hai.</h2>
@@ -1094,8 +1178,7 @@
     style="background-image: url('./assets/images/footer-banner.webp');">
 
     <div class="relative hidden xl:block">
-      <img src="./assets/images/profile-footer-new.png" alt="vikrant-profile"
-        class="absolute left-0 bottom-0 z-10" />
+      <img src="./assets/images/profile-footer-new.png" alt="vikrant-profile" class="absolute left-0 bottom-0 z-10" />
       <img src="./assets/images/yellow-strap-new.png" alt="yellow-strap" class="w-full h-full" />
     </div>
     <div class=" pt-14 pb-8 2xl:max-w-[1050px] xl:max-w-[950px] m-auto">
@@ -1112,10 +1195,11 @@
           <div>
             <h2
               class="font-raleway heading-primary fon md:text-[36.7px] 2xl:text-[38.7px] md:leading-[50px] 2xl:leading-[52px] font-bold text-white">
-              Professional Career Counselling You Can Trust  </h2>
+              Professional Career Counselling You Can Trust </h2>
             <p
               class="font-roboto text-[#FFFFFFCC] leading-[22.25px] md:leading-[29.25px] text-[14px] md:text-[18px] mt-6">
-              Jaro Education is a publicly listed organization with 16+ years of experience in career counselling. Over 3,50,000 professionals have found their career direction with us. Book your free session today.  </p>
+              Jaro Education is a publicly listed organization with 16+ years of experience in career counselling. Over
+              3,50,000 professionals have found their career direction with us. Book your free session today. </p>
             <a href="#formSection">
               <button
                 class="text-[#0029A4] 2xl:text-[18px] md:text-[16px] text-[14px] 2xl:leading-[11.71px]  md:leading-[13.71px] font-roboto font-semibold bg-white rounded-[14px] mt-6 xl:mt-14 mb-4 xl:mb-0 py-2 md:py-4 px-6 shadow-[0_10px_15px_-3px_#0000001A,0_4px_6px_-4px_#0000001A] hover:bg-[#e85f00] transition">Book
@@ -1159,8 +1243,10 @@
               </a>
             </div>
           </div>
-          <button class="text-[14px] leading-[20px] font-roboto font-[500] bg-white rounded-[14px] py-2 px-6">Explore
+         <a href="#slideListId">
+           <button class="text-[14px] leading-[20px] font-roboto font-[500] bg-white rounded-[14px] py-2 px-6">Explore
             All Programs</button>
+         </a>
         </div>
 
 

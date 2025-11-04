@@ -8,7 +8,7 @@ html {
 }
 
 .logo-marquee {
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   position: relative;
 }
 
@@ -69,6 +69,12 @@ html {
     height: 56px;
     padding: 0 30px;
   }
+}
+@media (max-width: 600px) {
+  .logo-marquee {
+  padding: 1rem 0;
+  position: relative;
+}
 }
 @media (max-width: 767.98px) {
   .logo-marquee--marquee-group img {
