@@ -87,7 +87,7 @@
 
 @screen md {
     .heading-primary {
-      @apply font-bold text-[50px] leading-[60px];
+      @apply font-bold text-[46px] leading-[60px];
     }
   }
   @screen md {
@@ -96,6 +96,16 @@
     }
   }
   }
+
+  @screen lg {
+    .heading-primary {
+      @apply font-bold text-[50px] leading-[60px];
+    }
+  }
+
+  
+
+  
    
   
 </style>
@@ -547,7 +557,7 @@
       </div>
       <a href="#formSection">
         <button
-          class="w-[70%] md:w-auto bg-[#D58A00] font-roboto md:text-[25px] text-[16px] leading-[27px] font-semibold px-5 py-4 lg:py-2 rounded-[33px] mt-6">
+          class="w-[70%] md:w-auto bg-[#D58A00] font-roboto md:text-[25px] text-[17px] md:text-[15px] leading-[18px] md:leading-[27px] font-semibold px-5 py-4 lg:py-2 rounded-[33px] mt-0 lg:mt-6">
           Free 1:1 Career Counselling
         </button>
       </a>
@@ -560,7 +570,7 @@
           <h3 class="font-roboto text-primary">Most professionals believe they’re doing well —
             until the world moves faster than they do.</h3>
 
-          <div class="mt-20 ">
+          <div class="mt-10 lg:mt-20">
             <h2 class="text-[20px] md:text-[30px] leading-[24px] font-roboto font-semibold">Our Program Categories &
               Partners</h2>
 
@@ -645,7 +655,7 @@
     <!-------------- quiz start section------------- -->
 
     <section>
-      <div class="pt-14 pb-[250px]">
+      <div class="pt-10 lg:pt-14 pb-[250px]">
         <h2 class="font-raleway text-[#304A98] heading-primary mb-6">Let's Find Your Direction.</h2>
         <p class="font-roboto text-[25px] text-primary text-black">Answer a few quick questions to get personalized
           guidance</p>
@@ -792,22 +802,22 @@
     <!-- ---------------------------worked hard --------------------------- -->
 
     <section
-      class="relative bg-cover bg-center text-white py-20 px-0 md:px-6 flex flex-col items-center justify-center text-center"
+      class="relative bg-cover bg-center text-white py-8 lg:py-20 px-0 md:px-6 flex flex-col items-center justify-center text-center"
       style="background-image: url('./assets/images/time-banner.png');">
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black/50"></div>
 
       <!-- Content -->
       <div class="relative z-10  wrapper">
-        <h2 class="heading-primary font-raleway mb-6">You’ve worked hard. Now it’s time to work ahead.</h2>
+        <h2 class="heading-primary font-raleway mt-4 mb-4 md:mb-6">You’ve worked hard. Now it’s time to work ahead.</h2>
         <p
-          class="text-[17px] md:text-[30px] leading-[24px] md:leading-[29px] mb-6 font-roboto w-full md:w-[80%] m-auto">
+          class="text-[17px] md:text-[30px] leading-[24px] md:leading-[29px] mb-4 md:mb-6 font-roboto w-full md:w-[80%] m-auto">
           At Jaro Education, our expert counsellors help you find clarity, confidence, and the fastest route to your
           next milestone.
         </p>
         <a href="#formSection">
           <button
-            class="rounded-[14px] mt-[60px] font-roboto tracking-[0.5px] font-bold text-[16px] md:text-[20px] leading-[16px] md:leading-[21px] rounded-[33px] px-6 py-4 text-white bg-[#f25657] border border-[#FFFFFF1A] hover:bg-white hover:text-black transition duration-300">
+            class="rounded-[14px] mt-0 md:mt-[60px] font-roboto tracking-[0.5px] font-bold text-[16px] md:text-[20px] leading-[16px] md:leading-[21px] rounded-[33px] px-6 py-4 text-white bg-[#f25657] border border-[#FFFFFF1A] hover:bg-white hover:text-black transition duration-300">
             Start My Counselling Journey
           </button>
         </a>
@@ -817,32 +827,32 @@
 
 
     <section class="bg-[#142149]">
-      <div class="wrapper pt-14">
-        <h2 class="heading-primary font-raleway text-white w-full md:w-[60%] m-auto">Why Jaro’s Career Counselling <span
+      <div class="wrapper pt-10 lg:pt-14">
+        <h2 class="heading-primary font-raleway text-white w-full lg:w-[60%] m-auto">Why Jaro’s Career Counselling <span
             class="text-[#FF6900]">Actually Works</span></h2>
         <p class="text-primary font-roboto text-white mt-4">Not just advice. A complete transformation from career
           confusion to absolute clarity.</p>
 
 
-        <div class="grid xl:grid-cols-3 grid-cols-1 gap-8 py-12 justify-center ">
+        <div class="grid xl:grid-cols-3 grid-cols-1 gap-6 lg:gap-8 py-10 lg:py-12 justify-center ">
 
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300 flex justify-center items-center">
               <img class="group-hover:hidden" src="./assets/images/portfolio-white.svg" alt="portfolio">
               <img class="hidden group-hover:block" src="./assets/images/portfolio-black.svg" alt="portfolio-b">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               Diverse Programme Portfolio</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               From online degrees to executive certifications and corporate training, our portfolio spans disciplines,
               industries, and professional levels, ensuring there’s a learning path for every goal.</p>
           </div>
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] relative w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300 flex justify-center items-center">
               <img class="group-hover:hidden" src="./assets/images/councellor-white.svg" alt="councellor">
@@ -852,71 +862,71 @@
                 alt="chat-b">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               Expert & Professional Counsellors</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               Our counsellors bring years of academic and industry expertise, guiding professionals with tailored
               recommendations, accurate fitment, and proven results.</p>
           </div>
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] flex justify-center items-center w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300">
               <img class="group-hover:hidden" src="./assets/images/referral-white.svg" alt="ref">
               <img class="hidden group-hover:block" src="./assets/images/referal-black.svg" alt="ref-2">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               High Referral Rate</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               Our high rate of referrals demonstrates the trust and satisfaction our learners experience, consistently
               leading to their success.</p>
           </div>
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] flex justify-center items-center w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300">
               <img class="group-hover:hidden" src="./assets/images/pre-institute-white.svg" alt="institue">
               <img class="hidden group-hover:block" src="./assets/images/pre-institute-black.svg" alt="institue">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               Premium Institutional Partnerships
             </h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               Collaborations with IIMs, IITs, and other globally ranked universities ensure quality, credibility, and
               strong career impact.</p>
           </div>
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] flex justify-center items-center w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300">
               <img class="group-hover:hidden" src="./assets/images/rate-white.svg" alt="rare-white">
               <img class="hidden group-hover:block" src="./assets/images/course-black.svg" alt="rare-white">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               95% Course Completion Rate</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               Our learner-first approach, engaging pedagogy, and mentoring support contribute to one of the highest
               completion rates in the online education sector.</p>
           </div>
           <div
-            class="p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
+            class="p-6 md:p-8 rounded-[20px] bg-white border-2 border-[#FF6900] hover:border-white hover:bg-[#FF6900] group transition duration-300">
             <div
               class="bg-[#FF6900] flex justify-center items-center w-[56px] h-[56px] rounded-[14px] group-hover:bg-white transition duration-300">
               <img class="group-hover:hidden" src="./assets/images/support-white.svg" alt="support">
               <img class="hidden group-hover:block" src="./assets/images/support-black.svg" alt="support">
             </div>
             <h2
-              class="text-[17px] md:text-[21px] text-left leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
+              class="text-[17px] md:text-[21px] text-left leading-[25px] md:leading-[33px] font-raleway font-bold text-black group-hover:text-white transition duration-300 mt-4">
               Placement Assistance & Lifelong Learning Support</h2>
             <p
-              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[24.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
+              class="text-[#000000B2] text-left font-roboto font-[400] text-[13px] md:text-[15px] leading-[20.38px] md:leading-[21.38px] group-hover:text-white transition duration-300 mt-4">
               Get continuous career guidance, from resume building and interview prep to alumni access and upskilling
               opportunities throughout your journey.</p>
           </div>
@@ -929,12 +939,12 @@
 
     <!-- -------------------our impact number-------------- -->
     <section>
-      <div class="wrapper pt-14 text-white">
+      <div class="wrapper pt-10 lg:pt-14 text-white">
         <h2 class="text-[#FA4942] font-raleway heading-primary">Our Impact <span class="text-[#304A98]">in
             Numbers</span></h2>
         <p class="text-primary font-roboto mt-4 text-black">Real results from real partnerships that drive career
           success</p>
-        <div class="grid grid-cols-1 xl:grid-cols-3 gap-16 py-12 ">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-16 py-8 lg:py-12 ">
           <div class="rounded-[24px] p-8  gap-6 relative bg-cover bg-center overflow-hidden"
             style="background-image: url('./assets/images/impact-1-webp.webp');">
 
@@ -1072,7 +1082,7 @@
     <!----------------------- frequelty asked questions ------------->
 
     <section>
-      <div class="wrapper py-14">
+      <div class="wrapper py-10 lg:py-14">
         <div class="">
           <h2 class="heading-primary md:text-[40px] md:leading-[66px] font-raleway text-[#0029A4] font-bold">Frequently
             Asked Questions</h2>
@@ -1081,7 +1091,7 @@
         </div>
 
 
-        <div class="space-y-4 py-12 max-w-full md:max-w-[892px] px-0 md:px-[30px] m-auto text-left">
+        <div class="space-y-4 py-6 lg:py-12 max-w-full md:max-w-[892px] px-0 md:px-[30px] m-auto text-left">
           <div
             class="accordion border-t-2 border-x-2 border-b-0 border-[#F3F4F6] shadow-[0_1px_3px_0_#0000001A,0_1px_2px_-1px_#0000001A] rounded-[14px]">
             <button
@@ -1181,10 +1191,10 @@
       <img src="./assets/images/profile-footer-new.png" alt="vikrant-profile" class="absolute left-0 bottom-0 z-10" />
       <img src="./assets/images/yellow-strap-new.png" alt="yellow-strap" class="w-full h-full" />
     </div>
-    <div class=" pt-14 pb-8 2xl:max-w-[1050px] xl:max-w-[950px] m-auto">
+    <div class=" pt-10 lg:pt-14 pb-8 2xl:max-w-[1050px] xl:max-w-[950px] m-auto">
 
       <div
-        class="grid grid-cols-1 xl:grid-cols-[auto_auto] justify-items-center xl:justify-items-stretch gap-y-14  2xl:gap-x-[150px] xl:gap-x-[90px] xl:px-8">
+        class="grid grid-cols-1 xl:grid-cols-[auto_auto] justify-items-center xl:justify-items-stretch gap-y-6 lg:gap-y-14  2xl:gap-x-[150px] xl:gap-x-[90px] xl:px-8">
 
         <div class="grid grid-cols-[auto_auto] items-end  gap-4 pr-4 xl:block border-b border-white lg:border-0">
           <div class="relative xl:hidden">
