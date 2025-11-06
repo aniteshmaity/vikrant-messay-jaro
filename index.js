@@ -252,7 +252,7 @@ if (backgroundVideo) backgroundVideo.pause();
     },
     {
        question: "What kind of support would help you move forward?",
-      answers: ["Personal career counselling", "upskilling", "Help finding the right program"]
+      answers: ["Personal career counselling", "Expert upskilling advice", "Help finding the right program"]
     }
   ];
 
