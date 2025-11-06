@@ -27,6 +27,7 @@ html {
   display: flex;
   overflow: hidden;
   user-select: none;
+  gap: 20px;
 }
 
 .logo-marquee--marquee-group {
@@ -35,6 +36,25 @@ html {
   gap: 30px;
   flex-shrink: 0;
   width: auto;
+}
+
+.logo-marquee--marquee-group p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+}
+
+.logo-marquee--marquee-group p::before {
+  content: "";
+  display: inline-block;
+  width: 10px; 
+  height: 10px; 
+  background-color: #000; 
+  margin-right: 20px; 
+  border-radius: 1px; 
 }
 
 
